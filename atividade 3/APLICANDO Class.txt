@@ -1,0 +1,22 @@
+from PontoQuadrilátero import Quadrilatero
+
+class Aplicando(Quadrilatero):
+    def __init__(self, x, y, P1x, P1y, P2x, P2y):
+        super().__init__(x, y, P1x, P1y, P2x, P2y)
+    def imprimeTeste(self):
+        print(f'\nPonto: {self.getX(),self.getY()}\nQuadrante {self.qualQuadrant()}')
+        if self.P1x < self.P2x and self.P1y > self.P2y:
+            print(f'\nP1: {self.P1}\t P2: {self.P2}')
+        else:
+            print('não foi possível formar o quadrilátero!')
+        print(f' \n{self.contidoEmQ()}')
+
+if __name__ == '__main__':
+    x = input('entre com o valor de X: ')
+    y = input('entre com o valo de Y: ')
+    P1x = input('entre com o valo de P1x: ')
+    P1y = input('entre com o valo de  P1y: ')
+    P2x = input('entre com o valo de P2x: ')
+    P2y = input('entre com o valo de P2y: ')
+    oz = Aplicando(x, y, P1x, P1y, P2x, P2y)
+    oz.imprimeTeste()
